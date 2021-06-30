@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodMall</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <h1 class="visually-hidden">FoodMall - The King of Taste</h1>
+        <div class="container">
+            <div class="row">
+                <div class="header__menu-and-search col-8">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <h3 class="visually-hidden">Navigation Pane</h3>
+                        <div class="container no-gutters">
+                          <a class="navbar-brand header__logo" href="#"><span class="text--gradient">Food</span> Mall</a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Category
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="#">Breakfast</a></li>
+                                  <li><a class="dropdown-item" href="#">Lunch</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#">Dinner</a></li>
+                                </ul>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link  active" href="#">Check out</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                              </li>
+                            </ul>
+                            <form class="d-flex formsearch">
+                              <input class="form-control me-2 seach__area" type="search" placeholder="Search for" aria-label="Search">
+                              <button class="btn btn-outline-success search__icon" type="submit"><i class='bx bx-search'></i></button>
+                            </form>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+                <div class="header__checkout col-4">
+                    <div class="dropdown">
+                        
+                        <button class="btn--checkout btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acount</button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item disabled" href="#">Disabled action</a>
+                            <p class="dropdown-header">Section header</p>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">After divider action</a>
+                        </div>
+                    </div>
+                    |
+                    <i class='bx bxs-cart-alt cart--icon'></i>
+                    <div class="dropdown open">
+                        
+                        <button class="btn--checkout btn btn-secondary btn-sm dropdown-toggle" type="button" id="triggerId2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">$0.00</button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId2">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item disabled" href="#">Disabled action</a>
+                            <p class="dropdown-header">Section header</p>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Ater divider action</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="py-5">
+        <section class="section breadcrumb__section">
+            <h2 class="visually-hidden">Sub Navigation Pane</h2>
+            <div class="container">
+                  <nav aria-label="breadcrumb">
+                    <h3 class="visually-hidden">Sub Navigation Pane Content</h3>
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#" class="">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Cart Details</li>
+                    </ol>
+                  </nav>
+            </div>
+        </section>
+        <section class="checkout__content">
+            <h2 class="visually-hidden">Main Checkout Area</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="product__block col-7">
+                        <h3 class="visually-hidden">Product Lists</h3>
+                        <table class="table table--product">
+                            <thead>
+                              <tr>
+                                <th scope="col" style="width: 270px">PRODUCT</th>
+                                <th scope="col">PRICE</th>
+                                <th scope="col" class="quantity__column">QUANTITY</th>
+                                <th scope="col" class="total__column">TOTAL</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                    <div class="one__news one__product">
+                                        <a href="" class="news__img product__img"><img src="images/item1.jpg" alt=""></a>
+                                        <div class="news__info product__info">
+                                            <div class="news__title product__title">Hamburgers</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>$30.00</td>
+                                <td>
+                                    <input type="number" name="a" id="a" min="1" placeholder="1">
+                                </td>
+                                <td class="total__product">
+                                    <span>$30.00<i class='bx bxs-x-square text--gradient text--gradient'></i></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <div class="one__news one__product">
+                                        <a href="" class="news__img product__img"><img src="images/item3.jpg" alt=""></a>
+                                        <div class="news__info product__info">
+                                            <div class="news__title product__title">Cherry Pancakes</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td >$45.00</td>
+                                <td>
+                                    <input type="number" name="b" id="b" min="1" placeholder="3">
+                                </td>
+                                <td class="total__product">
+                                    <span>$135.00<i class='bx bxs-x-square text--gradient'></i></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <div class="one__news one__product">
+                                        <a href="" class="news__img product__img"><img src="images/item4.jpg" alt=""></a>
+                                        <div class="news__info product__info">
+                                            <div class="news__title product__title">Pizza with Bell Pepper</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>$50.00</td>
+                                <td>
+                                    <input type="number" name="c" id="c" min="1" placeholder="1">
+                                </td>
+                                <td class="total__product">
+                                    <span>$50.00<i class='bx bxs-x-square text--gradient'></i></span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3">Total</td>
+                                <td class="total__number">$230.00</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <button type="button" class="btn btn-light btn-act">
+                            <span>
+                                <i class='bx bx-arrow-back'></i>
+                                CONTINUE SHOPPING
+                            </span>
+                          </button>
+                          <button type="button" class="btn btn-light btn-act">
+                            <span>
+                                <i class='bx bx-refresh'></i>
+                                UPDATE CART
+                            </span>
+                          </button>
+                    </div>
+                    <div class="cart__block col-5">
+                        <h3 class="visually-hidden">Cart Information</h3>
+                        <table class="table table--checkout">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">CART</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="total__row">
+                                    <td colspan="2" class="total__text">Sub Total</td>
+                                    <td class="total__number">$150.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Shipping</td>
+                                    <td colspan="2">
+                                        <form action="post" class="formcheckout">
+                                            <label for="exampleFormControlSelect1">Calculate shipping
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                <option selected>Vietnamese</option>
+                                                <option>Japanese</option>
+                                                <option>American</option>
+                                                <option>China</option>
+                                                <option>Turkey</option>
+                                                </select>
+                                            </label>
+                                            <label for="postcode"  class="visually-hidden">Postcode</label>
+                                            <input type="text" name="postcode" id="postcode" placeholder="Postcode/ZIP">
+                                            <button type="button" class="btn btn-act btn--update-total">
+                                                <span>
+                                                    <i class='bx bx-refresh'></i>
+                                                    UPDATE TOTAL
+                                                </span>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr class="total__row">
+                                    <td colspan="2">Total</td>
+                                    <td class="total__number">$150.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <button type="button" class="btn btn-act btn--update-total">
+                                            <span>
+                                                <i class='bx bx-refresh'></i>
+                                                PROCCESS TO CHECKOUT
+                                            </span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><span><i class='bx bxs-coupon' style="font-size: 20px; transform: translateY(3px);"></i>Coupon</span></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <form action="post" class="formCoupon">
+                                           <label for="coupon"  class="visually-hidden">Coupon</label>
+                                           <input type="text" name="g" id="coupon" placeholder="Coupon Code">
+                                        </form>
+                                        <button type="button" class="btn btn-act btn--update-total btn-coupon">
+                                            <span>
+                                                <i class='bx bx-refresh'></i>
+                                                APPLY COUPON
+                                            </span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer py-5">
+        <h2 class="visually-hidden">FoodMall - Footer</h2>
+        <div class="container">
+            <div class="row main__footer">
+                <div class="footer__item col-3 about__item">
+                    <h3 class="footer__item-title">ABOUT US</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit i amet alias? Architecto, nam voluptatum? Tempore quam, nulla est quod et quasi totam atque dicta molestias suscipit.</p>
+                </div>
+                <div class="footer__item col-3 news__item">
+                    <h3 class="footer__item-title">LATEST NEWS</h3>
+                    <div class="news__list">
+                        <div class="one__news">
+                            <a href="" class="news__img"><img src="images/item2.jpg" alt=""></a>
+                            <div class="news__info">
+                                <div class="news__title">A simple blog post</div>
+                                <p class="news__text">10 comments</p>
+                            </div>
+                        </div>
+                        <div class="one__news">
+                            <a href="" class="news__img"><img src="images/item3.jpg" alt=""></a>
+                            <div class="news__info">
+                                <div class="news__title">Just another posts</div>
+                                <p class="news__text">10 comments</p>
+                            </div>
+                        </div>
+                        <div class="one__news">
+                            <a href="" class="news__img"><img src="images/item4.jpg" alt=""></a>
+                            <div class="news__info">
+                                <div class="news__title">Product reviews</div>
+                                <p class="news__text">10 comments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__item col-3 tags__item">
+                    <h3 class="footer__item-title">TAGS</h3>
+                    <div class="tag__lists">
+                        <a href="" class="tag__item"><span>Tag1</span></a>
+                        <a href="" class="tag__item"><span>Tag2</span></a>
+                        <a href="" class="tag__item"><span>Tag3</span></a>
+                        <a href="" class="tag__item"><span>Tag4</span></a>
+                        <a href="" class="tag__item"><span>Tag5</span></a>
+                        <a href="" class="tag__item"><span>Tag6</span></a>
+                        <a href="" class="tag__item"><span>Tag8</span></a>
+                    </div>
+                </div>
+                <div class="footer__item col-3 signup__item">
+                    <h3 class="footer__item-title">SIGN UP FOR NEWSLETTER</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, perferendis vel saepe quasi amet alias? Architecto, nam voluptatum? </p>
+                    <form action="post" class="signup">
+                        <label for="email" class=" visually-hidden">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Your Email">
+                        <button type="submit" class="btn btn--submit btn-act">SIgn up</button>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="row copyright__footer">
+                <span>Copyright 2017 <i class='bx bx-copyright'></i> <a href="">FoodMall</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
